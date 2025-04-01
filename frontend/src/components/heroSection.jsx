@@ -1,5 +1,7 @@
-import video1 from '../assets/video1.mp4'
-import video2 from '../assets/video2.mp4'
+import video3 from '../assets/video3.mp4'
+import video4 from '../assets/video4.mp4'
+import video5 from '../assets/video5.mp4'
+import video6 from '../assets/video6.mp4'
 
 const HeroSection = () => {
   return (
@@ -14,24 +16,52 @@ const HeroSection = () => {
         <a href="#" className='bg-blue-500 py-2 px-4 mx-3 rounded-md text-white font-semibold hover:bg-blue-800 duration-300'>Start for free</a>
         <a href="#" className='py-2 px-4 mx-3 rounded-md border hover:bg-gray-300 duration-300'>Documentation</a>
       </div>
-      <div className='flex justify-center'>
-        <video
-          autoPlay
-          loop
-          muted
-          className='rounded-md w-1/2 border mx-2 my-4'>
-          <source src={video1} type='video/mp4' />
-          Your browser does not support the video tag.
-        </video>
+      <div className='flex flex-col md:flex-row justify-center max-w-6xl mx-auto w-full'>
+        <div className='md:w-1/2 p-2 h-64 md:h-80 hover:scale-105 duration-300 ease-in-out'>
+          <video
+            autoPlay
+            loop
+            muted
+            className='rounded-md w-full h-full object-cover border border-neutral-200 shadow-sm'>
+            <source src={video3} type='video/mp4' />
+            Your browser does not support the video tag.
+          </video>
+        </div>
 
-        <video
-          autoPlay
-          loop
-          muted
-          className='rounded-md w-1/2 border mx-2 my-4'>
-          <source src={video2} type='video/mp4' />
-          Your browser does not support the video tag.
-        </video>
+        <div className='md:w-1/2 p-2 h-64 md:h-80 hover:scale-105 duration-300 ease-in-out'>
+          <video
+            autoPlay
+            loop
+            muted
+            className='rounded-md w-full h-full object-cover border border-neutral-200 shadow-sm'>
+            <source src={video4} type='video/mp4' />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+      <div className='flex flex-col md:flex-row justify-center max-w-6xl mx-auto w-full'>
+        <div className='md:w-1/2 p-2 h-64 md:h-80 hover:scale-105 duration-300 ease-in-out'>
+          <video
+            autoPlay
+            loop
+            muted
+            className='rounded-md w-full h-full object-cover border border-neutral-200 shadow-sm'>
+            <source src={video5} type='video/mp4' />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div className='md:w-1/2 p-2 h-64 md:h-80 hover:scale-105 duration-300 ease-in-out'>
+          <video
+            autoPlay
+            loop
+            muted
+            className='rounded-md w-full h-full object-cover border border-neutral-200 shadow-sm'>
+            <source src={video6} type='video/mp4' />
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </div>
     </div>
   )
