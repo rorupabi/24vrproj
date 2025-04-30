@@ -1,7 +1,6 @@
 import Logo from '../assets/empty_dashboard_24dp_5084C1_FILL0_wght400_GRAD0_opsz24.svg'
 import { Menu, X } from "lucide-react"
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
   const [mobileDrawOpen, setMobileDrawOpen] = useState(false);
@@ -16,8 +15,6 @@ const Navbar = () => {
     { label: "Pricing", href: "#pricingSection" },
     { label: "Feedback", href: "#feedback" },
   ];
-
-  const navigate = useNavigate()
 
   // Smooth scroll function
   const handleNavClick = (e, href) => {
