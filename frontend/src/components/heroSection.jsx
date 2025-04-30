@@ -22,7 +22,7 @@ const HeroSection = () => {
             autoPlay
             loop
             muted
-            className='rounded-md w-full h-full object-cover border border-neutral-200 shadow-sm'>
+            className='rounded-md w-full h-full object-cover border border-neutral-200 shadow-md'>
             <source src={video3} type='video/mp4' />
             Your browser does not support the video tag.
           </video>
