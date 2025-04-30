@@ -4,6 +4,7 @@ import codeImg from '../assets/code.jpg'
 
 const codingWorkflow = () => {
   return (
+    <section id="codingWorkflow">
     <div className="">
       <h2 className="text-3xl sm:text-5xl lg:text-6xl text-center mt-6 tracking-wide mb-5">Accelerate your <span className="bg-blue-500 text-transparent bg-clip-text">coding workflow.</span></h2>
       <div className="flex flex-wrap justify-center">
@@ -25,6 +26,7 @@ const codingWorkflow = () => {
         </div>
       </div>
     </div>
+    </section>
   )
 }
 

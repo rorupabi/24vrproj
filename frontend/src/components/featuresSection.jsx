@@ -3,6 +3,7 @@ import { features } from '../constants/index.jsx'
 
 const featuresSection = () => {
   return (
+    <section id="featuresSection">
     <div className='relative mt-10 min-[800px]'>
       <div className="text-center">
         <span className='text-blue-500 h-2 text-lg font-medium px-2 py-1 uppercase'>
@@ -26,6 +27,7 @@ const featuresSection = () => {
         ))}
       </div>
     </div>
+    </section>
   )
 }
 

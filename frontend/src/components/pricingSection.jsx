@@ -3,6 +3,7 @@ import { pricingOptions } from '../constants/index.jsx'
 
 const pricingSection = () => {
   return (
+    <section id="pricingSection">
     <div className="mt-10">
       <h2 className="text-3xl sm:text-5xl lg:text-6xl text-center my-8 tracking-wider">Pricing</h2>
       <div className="flex flex-wrap">
@@ -31,6 +32,7 @@ const pricingSection = () => {
         ))}
       </div>
     </div>
+    </section>
   )
 }
 

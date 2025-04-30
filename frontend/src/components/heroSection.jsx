@@ -5,6 +5,7 @@ import video6 from '../assets/video6.mp4'
 
 const HeroSection = () => {
   return (
+    <section id='heroSection'>
     <div className="flex flex-col items-center mt-6 lg:mt-20">
       <h1 className="text-4xl sm:text-5xl lg:text-6xl text-center tracking-wide">
         Virtual Reality a building tool
@@ -64,6 +65,7 @@ const HeroSection = () => {
         </div>
       </div>
     </div>
+    </section>
   )
 }
 

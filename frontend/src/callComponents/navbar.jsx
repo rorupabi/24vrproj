@@ -1,5 +1,4 @@
 import Logo from '../assets/empty_dashboard_24dp_5084C1_FILL0_wght400_GRAD0_opsz24.svg'
-import { navItems } from '../constants/index.jsx'
 import { Menu, X } from "lucide-react"
 import { useState } from 'react'
 
@@ -8,6 +7,35 @@ const Navbar = () => {
 
   const toggleNavbar = () => {
     setMobileDrawOpen(!mobileDrawOpen);
+  };
+
+  const navItems = [
+    { label: "Features", href: "#featuresSection" },
+    { label: "Workflow", href: "#codingWorkflow" },
+    { label: "Pricing", href: "#pricingSection" },
+    { label: "Feedback", href: "#feedback" },
+  ];
+
+  // Smooth scroll function
+  const handleNavClick = (e, href) => {
+    e.preventDefault();
+    
+    // Remove the # from the href
+    const targetId = href.replace('#', '');
+    const element = document.getElementById(targetId);
+    
+    if (element) {
+      // Close mobile menu if open
+      if (mobileDrawOpen) {
+        setMobileDrawOpen(false);
+      }
+      
+      // Scroll to element with smooth behavior
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
   };
 
   return (
@@ -24,7 +52,11 @@ const Navbar = () => {
             <ul className="hidden lg:flex ml-14 space-x-12">
               {navItems.map((item, index) => (
                 <li key={index}>
-                  <a href={item.href} className="hover:underline text-gray-700">
+                  <a 
+                    href={item.href} 
+                    className="hover:underline text-gray-700"
+                    onClick={(e) => handleNavClick(e, item.href)}
+                  >
                     {item.label}
                   </a>
                 </li>
@@ -56,7 +88,11 @@ const Navbar = () => {
             <ul className="flex flex-col space-y-4">
               {navItems.map((item, index) => (
                 <li key={index}>
-                  <a href={item.href} className="text-gray-700 hover:text-blue-500">
+                  <a 
+                    href={item.href} 
+                    className="text-gray-700 hover:text-blue-500"
+                    onClick={(e) => handleNavClick(e, item.href)}
+                  >
                     {item.label}
                   </a>
                 </li>
